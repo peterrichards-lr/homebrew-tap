@@ -1,8 +1,8 @@
 class LcpSvcUpdate < Formula
   desc "Liferay Services Updater - Automated CLI tool to update Liferay Cloud service images"
   homepage "https://github.com/peterrichards-lr/lcp-svc-update"
-  url "https://github.com/peterrichards-lr/lcp-svc-update/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "8167c089585f9081415b9828cb04a09e3bd5c08f214b2d8c8ba598f8aa222b4f"
+  url "https://github.com/peterrichards-lr/lcp-svc-update/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "3aa3caafde94e2218555c52e2a211ffba5e886713665f688188a8f3b61f02786"
   license "MIT"
 
   depends_on "rust" => :build

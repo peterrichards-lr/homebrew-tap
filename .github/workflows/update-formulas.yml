@@ -1,0 +1,38 @@
+name: Update Homebrew Formulas
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at 00:00 UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-formulas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: sudo apt-get install -y jq curl
+
+      - name: Update lcp-svc-update
+        run: ./scripts/update-formula.sh lcp-svc-update peterrichards-lr/lcp-svc-update
+
+      - name: Update lfr-local
+        run: ./scripts/update-formula.sh lfr-local peterrichards-lr/lfr-local
+
+      - name: Update lfr-mock-gen
+        run: ./scripts/update-formula.sh lfr-mock-gen peterrichards-lr/lfr-mock-gen
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/*.rb
+          if git commit -m "Update formulas to latest versions"; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
