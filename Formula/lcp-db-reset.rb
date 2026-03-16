@@ -10,8 +10,9 @@ class LcpDbReset < Formula
   def install
     system "cargo", "install", *std_cargo_args
   end
-
+  
   test do
+    # Check that the binary is installed and executable
     system "#{bin}/lcp-db-reset", "--help"
   end
 end
