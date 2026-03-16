@@ -2,7 +2,7 @@ class LcpDbReset < Formula
   desc "A Liferay Cloud utility to reset the database schema."
   homepage "https://github.com/peterrichards-lr/lcp-db-reset"
   url "https://github.com/peterrichards-lr/lcp-db-reset/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "c39562ea41d208e8d09b2a227c2e68c4949db774e3ed391c19bd8ad10a91de65"
   license "MIT"
 
   depends_on "rust" => :build
@@ -10,9 +10,8 @@ class LcpDbReset < Formula
   def install
     system "cargo", "install", *std_cargo_args
   end
-  
+
   test do
-    # Check that the binary is installed and executable
     system "#{bin}/lcp-db-reset", "--help"
   end
 end
