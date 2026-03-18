@@ -2,7 +2,7 @@ name: Update Homebrew Formulas
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every day at 00:00 UTC
+    - cron: '0 */2 * * *' # Every 2 hours
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -25,6 +25,9 @@ jobs:
 
       - name: Update lfr-mock-gen
         run: ./scripts/update-formula.sh lfr-mock-gen peterrichards-lr/lfr-mock-gen
+
+      - name: Update lwu
+        run: ./scripts/update-formula.sh lwu peterrichards-lr/liferay-workspace-updater
 
       - name: Commit and push changes
         run: |
