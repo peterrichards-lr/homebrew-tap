@@ -1,8 +1,8 @@
 class Lwu < Formula
   desc "A CLI tool to automatically update the Liferay Workspace Gradle plugin to its latest version"
-  homepage "https://github.com/peterrichards-lr/automatic-potato"
-  url "https://github.com/peterrichards-lr/automatic-potato/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "bbb4ae97b6da0e4d2f51a4a3aedf0af116f070e2cc214ee1be82e23cebd9a4f5"
+  homepage "https://github.com/peterrichards-lr/lwu"
+  url "https://github.com/peterrichards-lr/lwu/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "8d309f7196dda3763101e6a65681e312aa1169a4a736cee10c2d5dda654eb7c6"
   license "MIT"
 
   depends_on "rust" => :build
