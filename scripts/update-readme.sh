@@ -14,12 +14,18 @@ for file in Formula/*.rb; do
     # Extract the repository owner/name from the homepage URL
     repo_path=$(echo "$homepage" | sed -E 's|https://github.com/||')
     
-    # Fetch description from GitHub API
+    # Fetch repository data from GitHub API
     if command -v gh >/dev/null 2>&1; then
-        desc=$(gh api "repos/$repo_path" --jq '.description')
+        repo_data=$(gh api "repos/$repo_path")
     else
-        desc=$(curl -s "https://api.github.com/repos/$repo_path" | jq -r '.description')
+        repo_data=$(curl -s "https://api.github.com/repos/$repo_path")
     fi
+    
+    # Extract description
+    desc=$(echo "$repo_data" | jq -r '.description')
+    
+    # Extract topics (tags) and format them as a comma-separated string
+    topics=$(echo "$repo_data" | jq -r 'if .topics and length > 0 then .topics | join(", ") else "" end')
     
     # Fallback to local description if API fails
     if [ -z "$desc" ] || [ "$desc" = "null" ]; then
@@ -27,6 +33,11 @@ for file in Formula/*.rb; do
     fi
     
     TOOLS_LIST+="- **[$toolname]($homepage)**: $desc\n"
+    
+    # Add tags if they exist
+    if [ -n "$topics" ]; then
+        TOOLS_LIST+="  <br>*(Tags: $topics)*\n"
+    fi
 done
 
 # Replace the text between the markers
