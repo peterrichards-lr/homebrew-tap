@@ -24,14 +24,17 @@ brew install peterrichards-lr/tap/<tool-name>
 
 ## 📜 Available Tools
 
+<!-- TOOLS_LIST_START -->
 The following tools are available in this tap:
 
-- **[lcp-db-reset](https://github.com/peterrichards-lr/lcp-db-reset)**: A Liferay Cloud utility to reset the database schema.
-- **[lcp-sql-fetch](https://github.com/peterrichards-lr/lcp-sql-fetch)**: A tool that executes local SQL scripts on a Liferay Cloud database via lcp shell and downloads the results.
-- **[lcp-svc-update](https://github.com/peterrichards-lr/lcp-svc-update)**: Liferay Services Updater - Automated CLI tool to update Liferay Cloud service images.
-- **[lfr-local](https://github.com/peterrichards-lr/lfr-local)**: Liferay Local Instance Manager - CLI tool for managing local side-by-side Liferay environments.
-- **[lfr-mock-gen](https://github.com/peterrichards-lr/lfr-mock-gen)**: Liferay Mock Content Generator - Blazing-fast CLI tool using Gemini AI to generate mock content.
-- **[lwu (Liferay Workspace Updater)](https://github.com/peterrichards-lr/liferay-workspace-updater)**: A CLI tool to automatically update the Liferay Workspace Gradle plugin to its latest version.
+- **[lcp-db-reset](https://github.com/peterrichards-lr/lcp-db-reset)**: A high-performance Rust CLI utility to reset Liferay Cloud (LCP) database schemas.
+- **[lcp-sql-fetch](https://github.com/peterrichards-lr/lcp-sql-fetch)**: Professional CLI tool to execute local SQL scripts on Liferay Cloud databases and fetch results securely.
+- **[lcp-svc-update](https://github.com/peterrichards-lr/lcp-svc-update)**: Liferay Services Updater - Automated CLI tool to update Liferay Cloud service Docker image references (LCP.json) by scraping official Liferay Support releases.
+- **[lfr-local](https://github.com/peterrichards-lr/lfr-local)**: A CLI tool to configure and run side-by-side Liferay instances within a local workspace.
+- **[lfr-mock-gen](https://github.com/peterrichards-lr/lfr-mock-gen)**: A blazing-fast Rust CLI tool that uses Gemini AI to generate realistic mock Web Content and pushes it directly to Liferay via Headless REST APIs.
+- **[lfr-tunnel](https://github.com/peterrichards-lr/lfr-tunnel)**: A secure, self-hosted tunneling solution for Liferay instances and client extensions, routing traffic from wildcard subdomains to local developer environments with automated SSL and offline support.
+- **[lwu](https://github.com/peterrichards-lr/liferay-workspace-updater)**: A CLI tool to automatically update the Liferay Workspace Gradle plugin to its latest version
+<!-- TOOLS_LIST_END -->
 
 ---
 
