@@ -8,7 +8,13 @@ FORMULA_FILE="Formula/${FORMULA_NAME}.rb"
 echo "Checking for updates for ${FORMULA_NAME} (${REPO})..."
 
 # Get the latest release tag from GitHub API
-LATEST_VERSION=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest" | jq -r '.tag_name')
+if [ -n "$GH_TOKEN" ]; then
+  LATEST_VERSION=$(curl -s -H "Authorization: token $GH_TOKEN" "https://api.github.com/repos/${REPO}/releases/latest" | jq -r '.tag_name')
+elif [ -n "$GITHUB_TOKEN" ]; then
+  LATEST_VERSION=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/${REPO}/releases/latest" | jq -r '.tag_name')
+else
+  LATEST_VERSION=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest" | jq -r '.tag_name')
+fi
 
 if [ -z "$LATEST_VERSION" ] || [ "$LATEST_VERSION" == "null" ]; then
     echo "Error: Could not find latest version for ${REPO}"
