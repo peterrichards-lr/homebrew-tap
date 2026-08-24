@@ -1,28 +1,28 @@
 class LfrTunnel < Formula
   desc "Secure HTTPS tunnel client for Liferay Sales Engineering team"
   homepage "https://github.com/peterrichards-lr/lfr-tunnel"
-  version "1.48.0"
+  version "1.48.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.0/lfr-tunnel-darwin-arm64"
-      sha256 "c166e456789563eeb42d375d41c13987565b01756ab0f23f59bfb7beffdbb23b"
+      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.1/lfr-tunnel-darwin-arm64"
+      sha256 "e69937d2a77bad0dff39850d0ad7861eb92a84dfa26007490ecfd122a80fe9bc"
     end
     on_intel do
-      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.0/lfr-tunnel-darwin-amd64"
-      sha256 "f035d8d7b566b2ffefbb696145d165f15098214b605aea1c2efb84c508efb701"
+      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.1/lfr-tunnel-darwin-amd64"
+      sha256 "36d87adad243f1e952d78d46279d7a58c05dda01c56a25021ae48a9a48c5446d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.0/lfr-tunnel-linux-arm64"
-      sha256 "52c42b9cac64db0c4e7f3b9d235f5624053a43f2b4f0348cfa60eea0a17880c3"
+      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.1/lfr-tunnel-linux-arm64"
+      sha256 "58f567feebcb18a6c11f130f98e9a301aaacad4a889a02c08d01eeacabad62aa"
     end
     on_intel do
-      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.0/lfr-tunnel-linux-amd64"
-      sha256 "20636b8df01a099aabc951f908086c2c2d3a04954aaa5eaed14801575d2117f5"
+      url "https://github.com/peterrichards-lr/lfr-tunnel/releases/download/v1.48.1/lfr-tunnel-linux-amd64"
+      sha256 "5c3e71c0722cf912bd4a4b89a86bfd3e7f1e943d4125c6b401813913e979bf1f"
     end
   end
 
