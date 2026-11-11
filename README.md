@@ -45,4 +45,13 @@ The following tools are available in this tap:
 
 ## 🛠️ How it Works
 
-Formulas in this tap are primarily updated automatically using GitHub Actions running in the individual tool repositories whenever a new release is created.
+Every 2 hours, the [Update Homebrew Formulas](.github/workflows/update-formulas.yml) workflow checks each tool's latest GitHub release. When it finds a new one, it updates the formula's `url` and `sha256` (`scripts/update-formula.sh`), regenerates the tool list above (`scripts/update-readme.sh`), and commits the result.
+
+Releasing a new version of a tool is therefore enough to update its formula here. `lfr-tunnel` is the exception: its own release workflow publishes its formula.
+
+### Adding a New Tool
+
+1. Add `Formula/<tool-name>.rb` for the tool's first release (the Rust tools generate it from their `formula.rb.example`).
+2. Add an `Update <tool-name>` step to `.github/workflows/update-formulas.yml` so later releases are picked up automatically.
+
+The tool list uses the first heading of each tool's README and its GitHub repository description and topics.

@@ -19,6 +19,12 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install -y jq curl
 
+      - name: Update lcp-db-reset
+        run: ./scripts/update-formula.sh lcp-db-reset peterrichards-lr/lcp-db-reset
+
+      - name: Update lcp-sql-fetch
+        run: ./scripts/update-formula.sh lcp-sql-fetch peterrichards-lr/lcp-sql-fetch
+
       - name: Update lcp-svc-update
         run: ./scripts/update-formula.sh lcp-svc-update peterrichards-lr/lcp-svc-update
 
