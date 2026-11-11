@@ -45,7 +45,7 @@ The following tools are available in this tap:
 
 ## 🛠️ How it Works
 
-Every 2 hours, the [Update Homebrew Formulas](.github/workflows/update-formulas.yml) workflow checks each tool's latest GitHub release. When it finds a new one, it updates the formula's `url` and `sha256` (`scripts/update-formula.sh`), regenerates the tool list above (`scripts/update-readme.sh`), and commits the result.
+Every 2 hours, the [Update Homebrew Formulas](.github/workflows/update-formulas.yml) workflow checks each tool's latest GitHub release. When it finds a new one, it updates the formula's `url` and `sha256` (`scripts/update-formula.sh`) and regenerates the tool list above (`scripts/update-readme.sh`). `main` only accepts pull requests, so the workflow opens one labelled `no-issue-needed` and squash-merges it.
 
 Releasing a new version of a tool is therefore enough to update its formula here. `lfr-tunnel` is the exception: its own release workflow publishes its formula.
 
