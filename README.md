@@ -29,9 +29,9 @@ The following tools are available in this tap:
 
 - **[Liferay Cloud Database Reset Tool (lcp-db-reset)](https://github.com/peterrichards-lr/lcp-db-reset)**: A high-performance Rust CLI utility to reset Liferay Cloud (LCP) database schemas.
   <br>*(Tags: automation, cli, cloud-native, database, devops, dxp, lcp, liferay, liferay-cloud, rust)*
-- **[Liferay Cloud SQL Fetch Tool (lcp-sql-fetch)](https://github.com/peterrichards-lr/lcp-sql-fetch)**: Professional CLI tool to execute local SQL scripts on Liferay Cloud databases and fetch results securely.
+- **[Liferay Cloud SQL Fetch (lcp-sql-fetch)](https://github.com/peterrichards-lr/lcp-sql-fetch)**: Professional CLI tool to execute local SQL scripts on Liferay Cloud databases and fetch results securely.
   <br>*(Tags: cli, database-management, devops, lcp, liferay, liferay-cloud, mysql, postgresql, rust, sql)*
-- **[Liferay Services Updater (lcp-svc-update)](https://github.com/peterrichards-lr/lcp-svc-update)**: Liferay Services Updater - Automated CLI tool to update Liferay Cloud service Docker image references (LCP.json) by scraping official Liferay Support releases.
+- **[Liferay Services Updater (lcp-svc-update)](https://github.com/peterrichards-lr/lcp-svc-update)**: Liferay Services Updater - Automated CLI tool to update Liferay Cloud service Docker image references (LCP.json) from the official Liferay Cloud services changelog.
   <br>*(Tags: automation, cli, devops, docker, dxp, json, lcp, liferay, liferay-cloud, liferay-experience-cloud, lxc, paas, rust, scraping)*
 - **[lfr-local](https://github.com/peterrichards-lr/lfr-local)**: A CLI tool to configure and run side-by-side Liferay instances within a local workspace.
 - **[lfr-mock-gen](https://github.com/peterrichards-lr/lfr-mock-gen)**: A blazing-fast Rust CLI tool that uses Gemini AI to generate realistic mock Web Content and pushes it directly to Liferay via Headless REST APIs.

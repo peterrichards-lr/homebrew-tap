@@ -1,8 +1,8 @@
 class Lwu < Formula
   desc "A CLI tool to automatically update the Liferay Workspace Gradle plugin to its latest version"
   homepage "https://github.com/peterrichards-lr/liferay-workspace-updater"
-  url "https://github.com/peterrichards-lr/liferay-workspace-updater/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "5ead9aa9a2ccbb1a5e972ea22b2257944899f9699c0c005863ed6924585934f5"
+  url "https://github.com/peterrichards-lr/liferay-workspace-updater/archive/refs/tags/v1.0.3.tar.gz"
+  sha256 "aaf1f1566f76057b6ebeafd9dd0cc491d076f1c2d85caad7766578d294982275"
   license "MIT"
 
   depends_on "rust" => :build
