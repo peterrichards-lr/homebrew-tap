@@ -1,8 +1,8 @@
 class LfrLocal < Formula
   desc "Liferay Local Instance Manager - CLI tool for managing local side-by-side Liferay environments"
   homepage "https://github.com/peterrichards-lr/lfr-local"
-  url "https://github.com/peterrichards-lr/lfr-local/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "fbf6cc9c421f12dc12d853ed57f3f334e008564b64f3c75a6920e874d51dc1d1"
+  url "https://github.com/peterrichards-lr/lfr-local/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "0cee057cb5eb9693e0027a21f89142a39c5caa7aa3e082dadd6927750c567a70"
   license "MIT"
 
   depends_on "rust" => :build
